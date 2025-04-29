@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Cabecalho from "./Components/cabecalho";
+import botaoWhatsapp from "./Components/botaoWhatsapp"
+import BotaoWhatsapp from "./Components/botaoWhatsapp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
+        
         <Cabecalho/>
+        
         {children}
         
       </body>
