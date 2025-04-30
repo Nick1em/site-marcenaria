@@ -5,3 +5,10 @@
     color: brown;
 }
 
+.main {
+    display: flexbox;
+ 
+    width: 1000px;
+    
+    
+}

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: 04000C;
+    background-color: black;
 }
 
 .cabecalho {
@@ -22,6 +22,7 @@
 .nav {
     font-size: 15;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
     text-decoration: none;
 }
 

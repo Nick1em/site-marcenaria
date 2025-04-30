@@ -4,6 +4,7 @@ import "./globals.css";
 import Cabecalho from "./Components/cabecalho";
 import botaoWhatsapp from "./Components/botaoWhatsapp"
 import BotaoWhatsapp from "./Components/botaoWhatsapp";
+import Footer from "./Components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         {children}
         
       </body>
+      <Footer/>
     </html>
   );
 }
