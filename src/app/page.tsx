@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../app/style/home.module.css"
 import { Html, Head, Main, NextScript} from "next/document";
-
+import CarroselWrapper from "./Components/carroselWrapper";
 
 export default function Home() {
   return (
@@ -9,16 +9,16 @@ export default function Home() {
 
     <main>
         <div>
-          <img src="/img/MesaBatman1.jpg"/>
+          <CarroselWrapper/>
         </div>
-        <div className={styles.main}>
+        <div className=" flex-col ">
           <h1>A Móveis Gondor</h1>
             <p>
-              Na Terra-média da marcenaria, somos os guardiões da madeira encantada.
-              A Móveis Gondor nasceu do amor por contar histórias através de móveis.
-              Aqui, cada projeto é uma jornada  e cada móvel, um artefato único.
-              Seja um móvel sob medida ou uma peça temática, criamos com alma, 
-              técnica e um toque de magia.
+            Na Terra-média da marcenaria, somos os guardiões da madeira encantada.
+            A Móveis Gondor nasceu do amor por contar histórias através de móveis.
+            Aqui, cada projeto é uma jornada  e cada móvel, um artefato único.
+            Seja um móvel sob medida ou uma peça temática, criamos com alma, 
+            técnica e um toque de magia.
             </p>
 
           <h1>Um toque de magia em sua casa!</h1>

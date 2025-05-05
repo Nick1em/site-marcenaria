@@ -21,10 +21,10 @@ export default function footer () {
                 </div>
 
                 <div className="text-center"> 
-                    <span>Contato</span> <br/>
-                    <span> (41) 9 9813-3328</span> <br/>
-                    <span> E-mail: moveisgondor@gmail.com</span> <br/>
-                    <span> Almirante Tamandaré - Paraná</span>
+                    <span > Contato</span> <br/>
+                    <span  > (41) 9 9813-3328</span> <br/>
+                    <span > E-mail: moveisgondor@gmail.com</span> <br/>
+                    <span > Almirante Tamandaré - Paraná</span>
                 </div>
 
                 <div  className=" flex flex-col colunm items-end">
