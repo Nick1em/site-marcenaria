@@ -33,7 +33,7 @@ export default function RootLayout({
         <Cabecalho/>
         
         {children}
-        
+      <BotaoWhatsapp/>
       </body>
       <Footer/>
     </html>
