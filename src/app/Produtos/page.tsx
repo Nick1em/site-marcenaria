@@ -21,7 +21,7 @@ export default function () {
             <div className="p-4">
               <h2 className="text-xl font-semibol">{produto.nome}</h2>
               <p className="text-sm text-gray-600 mb-2">{produto.descrição}</p>
-              <p className="text-lg text-gray-700 mb-4">{produto.preco},00 R$</p>
+              <p className="text-lg text-gray-700 mb-4">{produto.preco},00 R$ + Frete </p>
             </div>
             <button className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-xl">Compre Agora</button>
             
