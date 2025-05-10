@@ -1,0 +1,52 @@
+
+
+[
+    {
+        "id": "1",
+        "nome": "Mesa Pokebola",
+        "descrição":"Mesa feita em MDF, pintada a mão inspirada no universo de Pokémon,",
+        "preco":"400",
+        "foto":"/img/IMAGENS AQUI.png"
+    },
+    
+    {
+        "id": "2",
+        "nome": "Mesa Símbolo Batman",
+        "descrição":"Mesa feita em MDF, inspirada no universo DC do Batman",
+        "preco":"800",
+        "foto":"/img/IMAGENS AQUI.png"
+    },
+
+    {
+        "id": "3",
+        "nome": "Mesa Millenium Falcon",
+        "descrição":"Feita em MDF, ispirada no univer de Star Wars",
+        "preco":"875",
+        "foto":"/img/IMAGENS AQUI.png"
+    },
+
+    {
+        "id": "4",
+        "nome": "Mesa Mapa da Terra Média",
+        "descrição":"Feita em MDF, mapa desenhado a mão, inspirada no universo Senhor dos Anéis",
+        "preco":"900",
+        "foto":"/img/IMAGENS AQUI.png"
+    },
+
+    {
+        "id": "6",
+        "nome": "Mesa Bob Esponja",
+        "descrição":"Feita em MDF, inspirada no universo de Bob Sponja",
+        "preco":"400",
+        "foto":"/img/IMAGENS AQUI.png"
+    },
+
+    {
+        "id": "7",
+        "nome": "Mesa Mortal Kombat",
+        "descrição":"Feita em MDF, inspirada no universo de Mortal Kombat",
+        "preco":"400",
+        "foto":"/img/IMAGENS AQUI.png"
+    }
+
+]
