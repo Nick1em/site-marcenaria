@@ -1,0 +1,68 @@
+
+
+
+.corpo {
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#000000, #1f2833, #000000);
+    
+}
+
+.container {
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-family: 'Cinzel', serif; /*Font tipo "medieval" */
+    width: 27rem;
+    color: #c5c6c7;
+}
+
+.titulo {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #487285;
+    border-bottom: 2px solid #487285; /*TIRAR ESSA BORDA*/
+}
+
+.input {
+    padding: 0.3rem;
+    margin-bottom: -3%;
+    width: 80%;
+    color: #c5c6c7;                 /* Centralizei os placeholder na mão.*/
+    background-color: #0B1014;          /* Pesquisar se tem como usar código para fazer isso */
+    border: 3px solid #2d3d3c;
+    border-radius: 5px;
+}
+
+.input::placeholder {
+    color: #888;
+}
+
+.botao {
+    padding: 0.6rem 1.2rem;
+    color: #C0DEE6;
+    background-color: #0E1E23
+    ;
+    border: none;
+                                    /* fazer botão com concavos, lembrando a tela de login de jogos antigos*/
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #66fcf1;
+}
+
+.valorOrcamento {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    background-color: #0b0c10;
+    border: 1px solid #45a29e;
+}

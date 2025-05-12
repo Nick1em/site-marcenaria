@@ -5,6 +5,7 @@ import Cabecalho from "./Components/cabecalho";
 import BotaoWhatsapp from "./Components/botaoWhatsapp";
 import Footer from "./Components/footer";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,8 +34,9 @@ export default function RootLayout({
         
         {children}
       <BotaoWhatsapp/>
-      </body>
       <Footer/>
+      </body>
+     
     </html>
   );
 }

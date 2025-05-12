@@ -5,7 +5,7 @@ import { link } from "fs";
 
 export default function Cabecalho (){
    return (
-    <header className={styles.header}>
+    <div className={styles.header}>
       <div className= {styles.cabecalho}>
         <a href="/">
           <img className={styles.logo}  src="/img/arvore branca sf.png" alt="Logo Móveis Gondor" />
@@ -16,6 +16,6 @@ export default function Cabecalho (){
           <Link  href="/Calculadora">Seu orçamento na hora!</Link> 
         </nav>
       </div>
-    </header>
+    </div>
    )
 }
