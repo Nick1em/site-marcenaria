@@ -20,7 +20,7 @@ const imagemCarrosel: React.FC = () =>{
     };
     return(
 
-        <div style={{ width: "100%", overflow: "hidden" }}>
+        <div className="relative" style={{ maxWidth:767, overflow: "hidden" }}>
             <Slider {...settings}>
                 <img src="/img/IMAGENS AQUI.png" alt="Imagem temporaria"></img>
                 <img src="/img/MesaBatman1.jpg" alt="Imagem temporaria"></img>
