@@ -1,7 +1,16 @@
-export default function Calculadora() {
+import Link from "next/link";
+import CalculaOrcamento from "../Components/calculaOrcamento";
+
+
+export default function calculaOrcamento() {
   return (
     <div>
-      <p>Calculadoura</p>
+      <div>
+        
+        <CalculaOrcamento/>
+        
+      </div>
     </div>
+    
   );
 }
