@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 
 export default function Home() {
   return (
-    <div className="">
+    <div className={styles.principal}> 
       <div className="overflow-hidden h-[600px]">
           <CarroselWrapper/>
       </div>
@@ -42,12 +42,41 @@ export default function Home() {
               que você chama de lar.
               </p>
             </div>
-            <div>
+            <div className="fotosHomeGurpo">
+             <div className="grid grid-cols-2 gap-3">
+              <div className={styles.imgGrupo}>
               <img
               src="/img/IMAGENS AQUI.png"
               alt="Móvel Temático Direita"
-              className={styles.fotosHome}
-            />
+               
+              />
+
+             </div>
+              <div>
+              <img
+              src="/img/IMAGENS AQUI.png"
+              alt="Móvel Temático Direita"
+               
+              />
+              
+             </div>
+              <div>
+              <img
+              src="/img/IMAGENS AQUI.png"
+              alt="Móvel Temático Direita"
+               
+              />
+              
+             </div>
+              <div>
+              <img
+              src="/img/IMAGENS AQUI.png"
+              alt="Móvel Temático Direita"
+               
+              />
+              
+             </div>
+            </div>
           </div>
           </div>
 

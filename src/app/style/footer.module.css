@@ -1,6 +1,16 @@
 .rodape {
     height: 575px;
-    background-color: black;
+    background: linear-gradient(
+    #141310,
+    #0a0a08 ,
+    #080808 ,
+    #000000 ,
+    #000000 ,
+    #000000 ,
+    #000000 ,
+    #000000,
+    #000000 
+  );
     color: white;
     display: flex;
     flex-direction: column;

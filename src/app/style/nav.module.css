@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background: linear-gradient(to bottom, black,black,black,black,black,#080808 ,#131211 ,#141310)
 }
 
 .cabecalho {

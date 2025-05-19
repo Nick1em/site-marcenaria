@@ -1,4 +1,13 @@
-
+.principal {
+   background: linear-gradient(to bottom,
+    #0a0a0a 0%,
+    #1a1a19 20%,
+    #2a2927 40%,
+    #1a1a19 60%,
+    #0a0a0a 10%
+  );
+  min-height: 100vh;
+}
 .titulo {
     font-size: 25;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -29,5 +38,11 @@
 .fotosHome{
     width: 50rem;
     height: 20rem;
+    border-radius: 10px;
+}
+
+.fotosHomeGurpo{
+    width: 25rem;
+    height: 10rem;
     border-radius: 10px;
 }
