@@ -1,11 +1,10 @@
 .principal {
-   background: linear-gradient(to bottom,
-    #0a0a0a 0%,
-    #1a1a19 20%,
-    #2a2927 40%,
-    #1a1a19 60%,
-    #0a0a0a 10%
-  );
+   background: linear-gradient(
+    black,
+    #201f1a,
+    #141310,
+    black
+   );
   min-height: 100vh;
 }
 .titulo {
@@ -44,5 +43,6 @@
 .fotosHomeGurpo{
     width: 25rem;
     height: 10rem;
-    border-radius: 10px;
+    border-radius: 100px;
+    background-size: cover;
 }

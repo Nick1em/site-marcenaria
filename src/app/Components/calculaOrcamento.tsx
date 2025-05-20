@@ -37,7 +37,7 @@ export default function CalculaOrcamento () {
     const [quantidadeGavetas, setQuantidadeGavetas] = useState(0);
 
     //Medidas Gavetas
-    const [alturaGaveta, setAlturaGaveta] = useState(0);
+    const [alturaGaveta, setAlturaGaveta] = useState(20);
     const [larguraGaveta, setLarguraGaveta] = useState(0);
     const [profundidadeGaveta, setProfundidadeGaveta] = useState(0);
 
@@ -48,6 +48,11 @@ export default function CalculaOrcamento () {
     
 
     const calcular = () => {
+
+       
+        console.log('vc clicou em', movel);
+        // restante dos cálculos
+    
 
         //Cálculo das peças de estrutura de armário
         const laterais = (altura * profundidade) * 2;
@@ -68,7 +73,7 @@ export default function CalculaOrcamento () {
 
         //Cálculo Penteadeira
         const tampoPenteadeira = larguraPenteadeira * profundidadePenteadeira;
-        const lateraisPenteadeira = (alturaPenteadeira * profundidadeGaveta ) * 2;
+        const lateraisPenteadeira = (alturaPenteadeira * profundidadeGaveta ) * 2;  // rever calculos da penteadeira com meu pai
         const fundoPenteadeira = larguraPenteadeira * (alturaPenteadeira - expessuraMDF );
         const baseInferior = larguraPenteadeira * expessuraMDF; 
 
@@ -85,6 +90,7 @@ export default function CalculaOrcamento () {
         if (movel === 'Guarda-Roupa' || movel === 'Armário para banheiro' || movel === 'Armário para Cozinha Completa' ||
             movel === 'Armário para Cozinha Parte de cima' || movel === 'Armário para Cozinha Parte de baixo' || 
             movel === 'Cômoda' || movel === 'Rack') {
+
             areaTotal = laterais + baseTopo + fundo + qtdPrateleiras;
 
             if (temDivInterna === 'sim') {
@@ -92,7 +98,7 @@ export default function CalculaOrcamento () {
             } 
 
             if (temGaveta === 'sim') {
-                areaTotal += totalGaveta;       //TEM QUE ADICINAR A PERGUNTA DE MEDIDA DAS GAVETAS-------
+                areaTotal += totalGaveta;      
             } 
 
             if (temPortas === 'sim') {
@@ -101,9 +107,14 @@ export default function CalculaOrcamento () {
             
         }
 
-        else if (movel === 'Painel com Rack') {
+        else if (movel === 'Painel') {
+            areaTotal = areaPainel
 
-            let areaRack = laterais + baseTopo + fundo + qtdPrateleiras;
+        }
+
+        else if (movel === 'Painel com Rack') { // Para fazer esse móvel tem q adicionar a altura/largura/profundidade do rack ou vice versa
+
+            let areaRack = laterais + baseTopo + fundo + qtdPrateleiras; //tirei painel com rack das opções por enquanto
             if (temDivInterna === 'sim') areaRack += areaDivInterna;
             if (temGaveta === 'sim') areaRack += totalGaveta;
             if (temPortas === 'sim') areaRack += qtdPortas;
@@ -112,10 +123,12 @@ export default function CalculaOrcamento () {
         }
     
         else if (movel === 'Penteadeira') {
-            areaTotal = tampoPenteadeira + lateraisPenteadeira + fundoPenteadeira + baseInferior
+            areaTotal = tampoPenteadeira + lateraisPenteadeira + fundoPenteadeira + baseInferior;
         }
 
         
+        
+
         
 
         //Cálculo da quantidade de MDF que será usado
@@ -126,12 +139,12 @@ export default function CalculaOrcamento () {
         //Cálculo de custos:
 
         const material = chapasNecessaria * 250; // valor simbólico de MDF! preços reais no próximo commite!
-        const maoDeObra = material * 3;         //colocar valor dos parafusos/fitadeborda e cola
+        const maoDeObra = material * 3;         
         const subtotal = material + maoDeObra;
         const adicionais = Math.floor(subtotal / 100) * 45;
         const total = material + maoDeObra + adicionais;
 
-        
+        console.log('chapa', chapasNecessaria);
 
         setResultado(total);
     };
@@ -152,7 +165,7 @@ export default function CalculaOrcamento () {
                         <option className={styles.opticoes} value="Cômoda"> Cômoda </option>
                         <option className={styles.opticoes} value="Painel"> Painel</option>
                         <option className={styles.opticoes} value="Rack"> Rack </option>
-                        <option className={styles.opticoes} value="Painel com Rack"> Painel com Rack </option>
+                        
                         <option className={styles.opticoes} value="Penteadeira"> Penteadeira </option>    
                     </select>
   
@@ -175,6 +188,10 @@ export default function CalculaOrcamento () {
                         value={profundidade}
                         onChange={(e) => setProfundidade(Number(e.target.value))}
                     />
+
+
+
+
                     <label  className={styles.label}>Terá Portas?</label>
                     <div>
                         <label>
@@ -192,6 +209,28 @@ export default function CalculaOrcamento () {
                             </input> Não
                         </label>
                     </div>
+
+
+
+                    
+                    <label className={styles.label} >Terá Divisória?</label>
+                    <div>
+                         <input type="radio" value="sim" checked={temDivInterna === 'sim'} onChange={(e) => setTemDivInterna(e.target.value)} 
+                            ></input> Sim
+                            {temDivInterna === 'sim' && (
+                                <div>
+                                    <label>Quantas</label>
+                                    <input type="number" value={divInterna} onChange={(e) => setDivInterna (Number(e.target.value))}></input>
+                                </div>
+                        )}
+                        <label style={{marginLeft: '1rem'}} >
+                            <input type="radio" value="Não" checked={temDivInterna === "Não"} onChange={(e) => setTemDivInterna(e.target.value)}>
+                            </input> Não
+                        </label>
+                    </div>
+
+
+  
 
                     <label className={styles.label}>Terá gavetas?</label>
                     <div> 

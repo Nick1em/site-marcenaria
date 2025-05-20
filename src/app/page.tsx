@@ -4,15 +4,16 @@ import { Html, Head, Main, NextScript} from "next/document";
 import CarroselWrapper from "./Components/carroselWrapper";
 
 import {motion} from 'framer-motion'
+import SliderImg from "./Components/slideImg";
 
 export default function Home() {
   return (
     <div className={styles.principal}> 
-      <div className="overflow-hidden h-[600px]">
-          <CarroselWrapper/>
+      <div >
+          <SliderImg/>
       </div>
 
-      <div className="absolute -bottom-55 left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute -bottom-155 left-1/2 -translate-x-1/2 z-10">
         <div className="flex justify-center gap-4 px-4 max-w-3xs ">
         <img className="border-4 border-red-900" src="/img/IMAGENS AQUI.png"/>
          {/*Imagens flutuantes */}
@@ -20,7 +21,7 @@ export default function Home() {
         </div>
       </div> 
 
-      <main className="relative bg-[#141310] flex justify-center">
+      <main className="relative  flex justify-center">
 
         <div className="w-5xl">
 
@@ -99,7 +100,7 @@ export default function Home() {
               </div>
               <div>
                 <img
-                  src="/img/IMAGENS AQUI.png"
+                  src="/img/Mapa.jpg"
                   alt="Móvel Temático Esquerda"
                   className={styles.fotosHome}
                 />
@@ -126,7 +127,7 @@ export default function Home() {
               </div>
               <div>
                 <img
-                src="/img/IMAGENS AQUI.png"
+                src="/img/Nave.png"
                 alt="Móvel Temático Direita"
                 className={styles.fotosHome}
                 />
@@ -146,7 +147,7 @@ export default function Home() {
               </div>
               <div className="pb-10">
                 <img
-                src="/img/IMAGENS AQUI.png"
+                src="/img/NichoSM.jpg"
                 alt="Móvel Temático Esquerda"
                 className={styles.fotosHome}
                 />
