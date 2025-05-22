@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
-const imagemCarrosel: React.FC = () =>{
+const imagemCarrosel: React.FC = () => {
 
     const settings = {
         dots: false,
@@ -15,12 +15,12 @@ const imagemCarrosel: React.FC = () =>{
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        cssEase:"linear",
+        cssEase: "linear",
         arrows: false,
     };
-    return(
+    return (
 
-        <div className="relative" style={{ maxWidth:767, overflow: "hidden" }}>
+        <div className="relative" style={{ maxWidth: 767, overflow: "hidden" }}>
             <Slider {...settings}>
                 <img src="/img/IMAGENS AQUI.png" alt="Imagem temporaria"></img>
                 <img src="/img/MesaBatman1.jpg" alt="Imagem temporaria"></img>

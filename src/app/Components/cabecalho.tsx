@@ -13,7 +13,7 @@ export default function Cabecalho (){
         <nav className={styles.nav}>
           <Link  href="/">Home</Link> | {''}
           <Link  href="/Produtos">Produtos</Link>  | {''}
-          <Link  href="/Calculadora">Seu orçamento na hora!</Link> 
+          <Link  href="/Calculadora">Orçamento Inteligente!</Link> 
         </nav>
       </div>
     </div>

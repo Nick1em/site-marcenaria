@@ -9,13 +9,13 @@
 }
 .titulo {
     font-size: 25;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Cinzel', serif;
     color: #F7EFE5;
 }
 
 .paragrafo{
-    font-size: 15;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17;
+    font-family: 'Cinzel', serif;
     color: #F7EFE5;
 }
 
@@ -25,6 +25,7 @@
     flex-direction: row;
     align-items: center;
     gap:2rem;
+    
    
 }
 .secao2 {
@@ -32,17 +33,23 @@
   flex-direction: row-reverse;
   align-items: center;
   gap: 2rem; /* espaço entre imagem e texto */
+  padding-top: 10rem;
+  
 }
 
 .fotosHome{
-    width: 50rem;
+    width: 70rem;
     height: 20rem;
     border-radius: 10px;
 }
 
-.fotosHomeGurpo{
-    width: 25rem;
+.imgGrupo{
+    width: 40rem;
     height: 10rem;
-    border-radius: 100px;
+    border-radius: 10px;
     background-size: cover;
+}
+
+.videoHome{
+    object-fit: cover;
 }
