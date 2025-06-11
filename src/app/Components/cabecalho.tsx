@@ -11,8 +11,8 @@ export default function Cabecalho (){
           <img className={styles.logo}  src="/img/arvore branca sf.png" alt="Logo Móveis Gondor" />
         </a>
         <nav className={styles.nav}>
-          <Link  href="/">Home</Link> | {''}
-          <Link  href="/Produtos">Produtos</Link>  | {''}
+          <Link  href="/">Home</Link>  {''}
+          <Link  href="/Produtos">Produtos</Link>   {''}
           <Link  href="/Calculadora">Orçamento Inteligente!</Link> 
         </nav>
       </div>

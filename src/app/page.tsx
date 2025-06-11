@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className="absolute -bottom-211  left-1/2 -translate-x-1/2 z-10">
         <div className="flex justify-center gap-4 px-4 max-w-full ">         {/*Imagem flutuante */}
-          <img className="" src="/img/sakura.png" />
+          <img  />
         </div>
       </div>
 
