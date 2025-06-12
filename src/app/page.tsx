@@ -19,9 +19,9 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="relative  flex justify-center">
+      <main className="relative  flex justify-center ">
 
-        <div className="w-5xl">
+        <div className="w-5xl  sm:flex-col ">
 
           <div className={styles.secao}>
             <div>

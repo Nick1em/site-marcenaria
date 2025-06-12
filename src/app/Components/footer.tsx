@@ -27,7 +27,7 @@ export default function footer() {
                     <span > Almirante Tamandaré - Paraná</span>
                 </div>
 
-                <div className=" flex flex-col colunm items-end">
+                <div className=" flex flex-col colunm items-end sm:flex-col items-center">
                     <a href="https://www.instagram.com/moveisgondor/">
                         <img className={styles.redesSociais} src="/img/instaSemFundo.png" /> <br />
                     </a>

@@ -14,8 +14,12 @@ import 'swiper/css/scrollbar';
 function SliderImg () {
 
     const data = [
-        { id: '1', img:'/img/MesaBatman1.jpg'},
-        { id: '2', img:'/img/Pokebola.png'}
+        
+        { id: '1', img:'/img/IMG_0807.jpg'},
+        { id: '2', img:'/img/IMG_4461.jpg'},
+        { id: '3', img:'/img/IMG_9769.jpg'},
+        { id: '4', img:'/img/IMG_4473.jpg'},
+        { id: '5', img:'/img/IMG_4393.png'},
     ]
 
     return (
@@ -34,8 +38,8 @@ function SliderImg () {
                 <SwiperSlide key={fotos.id}>
                     <img
                     src={fotos.img}
-                    alt='Fotos das mesas feitas pela Móveis Gondor!'
-                    className="w-full h-250 bg-cover bg-center"
+                    alt='Fotos dos móveis temáticos feitos pela Móveis Gondor!'
+                    className="w-max h-max bg-cover bg-center"
                     />
                 </SwiperSlide>
                ))}

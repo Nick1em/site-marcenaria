@@ -7,10 +7,10 @@ export default function () {
 
     <div className="border-4  p-8 bg-[#141310] flex flex-col items-center justify-center">
       <div>
-        <h1 className="text-3xl text-white font-serif text-center pb-5 "> Nosso Pack de Produtos </h1>
+        <h1 className="text-3xl text-[#854836] font-serif text-center pb-5 "> Nosso Pack de Produtos </h1>
       </div>
 
-      <div className="grid grid-cols-3  gap-8"> {/*diposição das cartas */}
+      <div className="grid md:grid-cols-2 gap-20 sm:grid-cols-1 "> {/*diposição das cartas */}
         {Produtos.map((produto) => (
           <div key={produto.id} className="flex flex-col items-center justify-center
            bg-[url(/img/bordaCarta.png)]  bg-cover bg-center w-111 h-163 rounded-xl"> {/*configuração das cartas*/}

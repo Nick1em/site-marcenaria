@@ -13,10 +13,14 @@
 }
 
 .redesSociais {
-    height: 17px;
-    width: 17px;
+    height: 30px;
+    width: 30px;
+    transition: transform 0.2s ease;
 }
 
+.redesSociais:hover {
+    transform: scale(1.1);
+}
 .infosRodape {
     padding: 50px;
     width:1200px;
@@ -41,4 +45,23 @@
     align-items: center;
 }
 
+/*Responsividade*/
+
+@media (max-width: 768px) {
+    .infosRodape{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav{
+        align-items: center;
+    }
+
+  
+
+    .logo{
+        width: 130px;
+    }
+}
 
