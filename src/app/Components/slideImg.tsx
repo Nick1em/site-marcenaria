@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
-import Link from 'next/link'
+
 
 
 import 'swiper/css';

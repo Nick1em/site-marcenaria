@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Document from "next/document";
+
 import styles from "../style/footer.module.css";
 
 

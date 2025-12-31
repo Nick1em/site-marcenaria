@@ -1,6 +1,6 @@
 'use client'
-import Link from "next/link";
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import styles from "../style/orcamento.module.css"
 
 
@@ -20,13 +20,13 @@ export default function CalculaOrcamento() {
     const [divInterna, setDivInterna] = useState("");
 
     //prateleiras?
-    const [temPrateleiras, setPrateleiras] = useState('');
-    const [prateleiras, setPrateleira] = useState("");
+    //const [temPrateleiras, setPrateleiras] = useState('');
+    //const [prateleiras, setPrateleira] = useState("");
 
     //Medidas Penteadeira
-    const [alturaPenteadeira, setAlturaPenteadeira] = useState(0);
-    const [larguraPenteadeira, setLarguraPenteadeira] = useState(0);
-    const [profundidadePenteadeira, setProfundidaPenteadeira] = useState(0);
+    //const [alturaPenteadeira, setAlturaPenteadeira] = useState(0);
+    //const [larguraPenteadeira, setLarguraPenteadeira] = useState(0);
+    //const [profundidadePenteadeira, setProfundidaPenteadeira] = useState(0);
 
     //portas?
     const [temPortas, setTemPortas] = useState('');
@@ -37,13 +37,13 @@ export default function CalculaOrcamento() {
     const [quantidadeGavetas, setQuantidadeGavetas] = useState("");
 
     //Medidas Gavetas
-    const [alturaGaveta, setAlturaGaveta] = useState(20);
-    const [larguraGaveta, setLarguraGaveta] = useState(0);
-    const [profundidadeGaveta, setProfundidadeGaveta] = useState(0);
+    //const [alturaGaveta, setAlturaGaveta] = useState(20);
+    //const [larguraGaveta, setLarguraGaveta] = useState(0);
+    //const [profundidadeGaveta, setProfundidadeGaveta] = useState(0);
 
     const [movel, setMovel] = useState('');
 
-    const [quantidadeMDF, setQuantidadeMDF] = useState(0);
+    //const [quantidadeMDF, setQuantidadeMDF] = useState(0);
     const [resultado, setResultado] = useState(0);
 
     //Escondendo os input/radios
@@ -89,23 +89,23 @@ export default function CalculaOrcamento() {
         const baseTopo = (Number(largura) * Number(profundidade)) * 2;
         const fundo = Number(altura) * Number(largura);
         const qtdPortas = Number(portas) > 0 ? Number(altura) * (Number(largura) / Number(portas)) * Number(portas) : 0;
-        const qtdPrateleiras = Number(profundidade) * Number(largura) * Number(prateleiras);
+        //const qtdPrateleiras = Number(profundidade) * Number(largura) * Number(prateleiras);
 
         // Cálculo da divisória vertical (podedia usar o tamanho das laterais para facilitar!)
         const areaDivInterna = (Number(altura) - (2 * expessuraMDF)) * Number(profundidade);
 
         //Cálculo das gavestas
-        const lateraisGaveta = (alturaGaveta * profundidadeGaveta) * 2;
-        const freteEtraseira = 2 * (alturaGaveta * (larguraGaveta - 2 * expessuraMDF));
-        const fundoGaveta = (larguraGaveta - 2 * expessuraMDF) * (profundidadeGaveta - expessuraMDF)
-        const areaGaveta = lateraisGaveta + freteEtraseira + fundoGaveta;
-        const totalGaveta = areaGaveta * Number(quantidadeGavetas);
+       // const lateraisGaveta = (alturaGaveta * profundidadeGaveta) * 2;
+       // const freteEtraseira = 2 * (alturaGaveta * (larguraGaveta - 2 * expessuraMDF));
+       // const fundoGaveta = (larguraGaveta - 2 * expessuraMDF) * (profundidadeGaveta - expessuraMDF)
+       // const areaGaveta = lateraisGaveta + freteEtraseira + fundoGaveta;
+       // const totalGaveta = areaGaveta * Number(quantidadeGavetas);
 
         //Cálculo Penteadeira
-        const tampoPenteadeira = larguraPenteadeira * profundidadePenteadeira;
-        const lateraisPenteadeira = (alturaPenteadeira * profundidadeGaveta) * 2;  // rever calculos da penteadeira com meu pai
-        const fundoPenteadeira = larguraPenteadeira * (alturaPenteadeira - expessuraMDF);
-        const baseInferior = larguraPenteadeira * expessuraMDF;
+       // const tampoPenteadeira = larguraPenteadeira * profundidadePenteadeira;
+        //const lateraisPenteadeira = (alturaPenteadeira * profundidadeGaveta) * 2;  // rever calculos da penteadeira com meu pai
+        //const fundoPenteadeira = larguraPenteadeira * (alturaPenteadeira - expessuraMDF);
+        //const baseInferior = larguraPenteadeira * expessuraMDF;
 
         //calculo painel
         const areaPainel = Number(altura) * Number(largura)
@@ -121,15 +121,15 @@ export default function CalculaOrcamento() {
             movel === 'Armário para Cozinha Parte de cima' || movel === 'Armário para Cozinha Parte de baixo' ||
             movel === 'Cômoda' || movel === 'Rack') {
 
-            areaTotal = laterais + baseTopo + fundo + qtdPrateleiras;
+            areaTotal = laterais + baseTopo + fundo ;
 
             if (temDivInterna === 'sim') {
                 areaTotal += areaDivInterna;
             }
 
-            if (temGaveta === 'sim') {
-                areaTotal += totalGaveta;
-            }
+           // if (temGaveta === 'sim') {
+           //     areaTotal += totalGaveta;
+           // }
 
             if (temPortas === 'sim') {
                 areaTotal += qtdPortas;
@@ -142,19 +142,19 @@ export default function CalculaOrcamento() {
 
         }
 
-        else if (movel === 'Painel com Rack') { // Para fazer esse móvel tem q adicionar a altura/largura/profundidade do rack ou vice versa
+     //   else if (movel === 'Painel com Rack') { // Para fazer esse móvel tem q adicionar a altura/largura/profundidade do rack ou vice versa
 
-            let areaRack = laterais + baseTopo + fundo + qtdPrateleiras; //tirei painel com rack das opções por enquanto
-            if (temDivInterna === 'sim') areaRack += areaDivInterna;
-            if (temGaveta === 'sim') areaRack += totalGaveta;
-            if (temPortas === 'sim') areaRack += qtdPortas;
+       //     let areaRack = laterais + baseTopo + fundo + qtdPrateleiras; //tirei painel com rack das opções por enquanto
+       //     if (temDivInterna === 'sim') areaRack += areaDivInterna;
+       //     if (temGaveta === 'sim') areaRack += totalGaveta;
+       //     if (temPortas === 'sim') areaRack += qtdPortas;
 
-            areaTotal = areaPainel + areaRack;
-        }
+        //    areaTotal = areaPainel + areaRack;
+       // }
 
-        else if (movel === 'Penteadeira') {
-            areaTotal = tampoPenteadeira + lateraisPenteadeira + fundoPenteadeira + baseInferior;
-        }
+       // else if (movel === 'Penteadeira') {
+       //     areaTotal = tampoPenteadeira + lateraisPenteadeira + fundoPenteadeira + baseInferior;
+       // }
 
 
 

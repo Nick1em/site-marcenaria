@@ -1,8 +1,8 @@
-import Image from "next/image";
+
 
 import Produtos from "../data/produtos.json"
 
-export default function () {
+export default function ProdutosPage () {
   return (
 
     <div className="border-4  p-8 bg-[#141310] flex flex-col items-center justify-center">
