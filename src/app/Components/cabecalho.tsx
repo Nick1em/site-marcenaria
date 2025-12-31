@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styles from "../style/nav.module.css"
 
-import { link } from "fs";
+
 
 export default function Cabecalho (){
    return (
