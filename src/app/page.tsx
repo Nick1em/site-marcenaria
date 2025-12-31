@@ -1,9 +1,5 @@
-import Link from "next/link";
-import styles from "../app/style/home.module.css"
-import { Html, Head, Main, NextScript } from "next/document";
-import CarroselWrapper from "./Components/carroselWrapper";
 
-import { motion } from 'framer-motion'
+import styles from "../app/style/home.module.css"
 import SliderImg from "./Components/slideImg";
 
 export default function Home() {
