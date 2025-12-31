@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+
 import Produtos from "../data/produtos.json"
 
 export default function () {
@@ -10,20 +10,20 @@ export default function () {
         <h1 className="text-3xl text-[#854836] font-serif text-center pb-5 "> Nosso Pack de Produtos </h1>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-20 sm:grid-cols-1 "> {/*diposição das cartas */}
+      <div className="grid grid-cols- md:grid-cols- gap-20 sm:grid-cols-1 "> {/*diposição das cartas */}
         {Produtos.map((produto) => (
           <div key={produto.id} className="flex flex-col items-center justify-center
-           bg-[url(/img/bordaCarta.png)]  bg-cover bg-center w-111 h-163 rounded-xl"> {/*configuração das cartas*/}
+           bg-[url(/img/bordaCarta.png)] bg-contain bg-no-repeat bg-center w-90 h-133 rounded-xl"> {/*configuração das cartas*/}
 
-            <div className=" p-2 w-105 h-157 bg-[url(/img/fundoCarta.png)] bg-cover bg-center 
+            <div className=" p-2  bg-[url(/img/fundoCarta.png)] w-85 h-125 bg-cover bg-center 
               flex flex-col items-center justify-center">
 
-              <div className="w-100 h-15 bg-[url(/img/fundoNomeProduto.png)] 
+              <div className="w-80 h-15 bg-[url(/img/fundoNomeProduto.png)] 
               bg-contain bg-center flex items-center">
 
                 <div className="w-98 flex flex-row justify-between">
                   <h2 className="  pl-2 text-2xl font-serif font-bold p-1 ">{produto.nome} </h2>
-                  <img className="w-10 " src="/img/divine.png"></img>
+                  <img className="w-8 h-8 " src="/img/divine.png"></img>
                 </div>
               </div>
 
@@ -64,12 +64,12 @@ export default function () {
               </div>
 
               <div className="bg-[url(/img/bordaFotoCarta.png)] bg-cover bg-center 
-                w-92 h-95 flex flex-col items-center justify-center">
+                w-72 h-75 flex flex-col items-center justify-center">
 
                 <div className="size-87 overflow-hidden rounded-md">
                   <img
                     src={produto.foto}
-                    className="w-full h-full object-cover"
+                    className="w-10 h-10 object-cover"
                   />
                 </div>
 
@@ -77,9 +77,10 @@ export default function () {
               <div className="relative w-84 h-3 flex flex-row justify-end">
                 <p className=" absolute top-[-8] right-[-5] text-[14px] font-medium">info-descr</p>
               </div>
-              <div className="bg-[#EDDBCF] w-90 flex flex-col items-center justify-center ">
-                <div className="  w-92  
-                bg-[url(/img/bordaDescrição.png)] 
+              <div className="bg-[#EDDBCF] w-7 bg-cover bg-center flex flex-col items-center justify-center ">
+                <div className="    
+                bg-[url(/img/bordadescri.png)]
+                w-174
                 flex flex-col items-center justify-center  
                 bg-cover bg-center ">
 
@@ -92,7 +93,7 @@ export default function () {
                     <div className=" w-85  ">
                       <p className=" order-2  text-sm text-black-900  ">{produto.descrição}</p>
                     </div>
-                    
+
                   </div>
 
                   <div className=" pt-10">
@@ -107,8 +108,8 @@ export default function () {
 
                 </div>
                 <div className=" relative w-85 flex flex-row justify-end  ">
-                      <button className="absolute top-[-55] text-white border-1 border-[#854836] rounded-xl bg-[#854836]">Garanta a sua</button>
-                    </div>
+                  <button className="absolute top-[-55] text-white border-1 border-[#854836] rounded-xl bg-[#854836]">Garanta a sua</button>
+                </div>
 
               </div>
               <div className=" w-90 h-3 flex flex-row  justify-between whitespace-nowrap">
