@@ -1,0 +1,14 @@
+
+.h1 {
+    font-size: 25;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+}
+
+.main {
+    display: flexbox;
+ 
+    width: 1000px;
+    
+    
+}
