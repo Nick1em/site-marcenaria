@@ -1,12 +1,10 @@
 'use client'
 
 import { useState } from "react";
-import styles from "../style/orcamento.module.css"
+import styles from '../../style/orcamento.module.css';
 
 
-export default function CalculaOrcamento() {
-
-
+export default function antigaCalculadoraPrincipal() {
 
 
     const expessuraMDF = 1.8;

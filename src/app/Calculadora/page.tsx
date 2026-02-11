@@ -1,5 +1,6 @@
 
-import CalculaOrcamento from "../Components/calculaOrcamento";
+import CalculadoraPrincipal from "./components/calculadoraPrincipal";
+
 
 
 export default function calculaOrcamento() {
@@ -7,7 +8,7 @@ export default function calculaOrcamento() {
     <div>
       <div>
         
-        <CalculaOrcamento/>
+        <CalculadoraPrincipal/>
         
       </div>
     </div>
