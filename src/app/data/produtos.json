@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "nome": "Mesa Pokebola",
+        "tempoEntrega": "[ PRONTA 15 DIAS APÓS O PEDIDO! ]",
+        "descrição": "Mesa feita em MDF, pintada a mão inspirada no universo de Pokémon",
+        "universo":"Pokémon",
+        "preco": "400",
+        "foto": "/img/IMG_0158.jpg"
+    },
+    {
+        "id": "2",
+        "nome": "Mesa Símbolo Batman",
+        "tempoEntrega": "[  15 DIAS APÓS O PEDIDO! ]",
+        "descrição": "Mesa feita em MDF, inspirada no universo DC do Batman",
+        "universo":"DC",
+        "preco": "800",
+        "foto": "/img/MesaBatman1.jpg"
+    },
+    {
+        "id": "3",
+        "nome": "Mesa Millenium Falcon",
+        "tempoEntrega": "[  15 DIAS APÓS O PEDIDO! ]",
+        "descrição": "Feita em MDF, ispirada no univer de Star Wars",
+        "universo":"Disney",
+        "preco": "875",
+        "foto": "/img/mf.png"
+    },
+    {
+        "id": "4",
+        "nome": "Mesa:Mapa/Terra Média",
+        "tempoEntrega": "[  25 DIAS APÓS O PEDIDO! ]",
+        "descrição": "Feita em MDF, mapa desenhado a mão, inspirada no universo Senhor dos Anéis",
+        "universo":"TOLKIEN",
+        "preco": "900",
+        "foto": "/img/Mapa.jpg"
+    },
+    {
+        "id": "6",
+        "nome": "Mesa Bob Esponja",
+        "tempoEntrega": "[  15 DIAS APÓS O PEDIDO! ]",
+        "descrição": "Feita em MDF, inspirada no universo de Bob Sponja",
+        "universo":"Nick",
+        "preco": "400",
+        "foto": "/img/IMG_0144.jpg"
+    },
+    {
+        "id": "7",
+        "nome": "Mesa Mortal Kombat",
+        "tempoEntrega": "[  15 DIAS APÓS O PEDIDO! ]",
+        "descrição": "Feita em MDF, inspirada no universo de Mortal Kombat",
+        "universo":"MK",
+        "preco": "400",
+        "foto": "/img/mk1.png"
+    }
+]
