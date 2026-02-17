@@ -1,13 +1,22 @@
+
 import Link from "next/link";
+import styles from "../style/nav.module.css"
+
+
 
 export default function Cabecalho (){
    return (
-    <header>
-      <nav>
-        <Link href="/">Home</Link> | {''}
-        <Link href="/Produtos">Produtos</Link> | {''}
-        <Link href="/Calculadora">Calculadora</Link> | {''}
-      </nav>
-    </header>
+    <div className={styles.header}>
+      <div className= {styles.cabecalho}>
+        <Link href="/">
+          <img className={styles.logo}  src="/img/arvore branca sf.png" alt="Logo Móveis Gondor" />
+        </Link>
+        <nav className={styles.nav}>
+          <Link  href="/">Home</Link>  {''}
+          <Link  href="/Produtos">Produtos</Link>   {''}
+          <Link  href="/Calculadora">Orçamento Inteligente!</Link> 
+        </nav>
+      </div>
+    </div>
    )
 }

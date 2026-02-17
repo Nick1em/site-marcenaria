@@ -1,7 +1,17 @@
-export default function Calculadora() {
+
+import CalculadoraPrincipal from "./components/calculadoraPrincipal";
+
+
+
+export default function calculaOrcamento() {
   return (
     <div>
-      <p>Calculadoura</p>
+      <div>
+        
+        <CalculadoraPrincipal/>
+        
+      </div>
     </div>
+    
   );
 }
