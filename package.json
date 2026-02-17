@@ -16,7 +16,7 @@
     "react-dom": "^19.2.3",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.6"
+    "swiper": "^12.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
