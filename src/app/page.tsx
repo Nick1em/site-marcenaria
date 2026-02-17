@@ -1,14 +1,21 @@
 
+//Importando CSS
 import styles from "../app/style/home.module.css"
+
+//Importando Slider
 import SliderImg from "./Components/slideImg";
 
 export default function Home() {
   return (
+    //Carrosel de imagens
     <div className={styles.principal}>
-      <div >
+
+      <div>
         <SliderImg />
       </div>
 
+
+      //Imagem flutuante - retirei por enqunto pq não achei uma imagem boa.
       <div className="absolute -bottom-211  left-1/2 -translate-x-1/2 z-10">
         <div className="flex justify-center gap-4 px-4 max-w-full ">         {/*Imagem flutuante */}
           <img  />

@@ -2,11 +2,15 @@
 
 import { useState } from 'react';
 import styles from '../../style/orcamento.module.css';
-import InputsUsuarioEstrutura from './inputsUsuario';
 
+//Importando inputs do usuário
+import InputsUsuarioEstrutura from './inputsUsuario';
 
 //Importandono o hook de dimensões
 import { useDimensoesEstrutura } from '../hooks/useDimensoesEstrutura';
+
+//Importando os componentes de inputs e opções de estrutura, para não precisar ficar repetindo em cada móvel
+import OpcoesEstrutura from './opcoesEstrutura';
 
 
 export default function CozinhaBaixo() {
@@ -23,6 +27,10 @@ export default function CozinhaBaixo() {
             dimensoesCompletas,
         } = useDimensoesEstrutura();
     
+        const [temGaveta, setTemGaveta] = useState('');
+        const [temPorta,setTemPorta] = useState('')
+
+        const [temDivisoria, setTemDivisoria] = useState('');
 
     const dimensoesUsuario = altura && largura && profundidade;
 
@@ -59,7 +67,8 @@ export default function CozinhaBaixo() {
 
     };
 
-    return (
+     return (
+        <>
             <InputsUsuarioEstrutura
                 altura={altura}
                 largura={largura}
@@ -68,5 +77,24 @@ export default function CozinhaBaixo() {
                 setLargura={setLargura}
                 setProfundidade={setProfundidade}
             />
-        )
+
+            {dimensoesCompletas && (
+                <>
+                    <OpcoesEstrutura
+                        mostrarDivisorias
+                        mostrarGavetas
+                        temDivisoria={temDivisoria}
+                        setTemDivisoria={setTemDivisoria}
+                        temGaveta={temGaveta}
+                        setTemGaveta={setTemGaveta}
+                    />
+
+                    <button className={styles.botao} onClick={calcular}> Calcular</button>
+
+                    <label className={styles.valorOrcamento}>Seu orçamento é de R $ {resultado} </label>
+
+                </>
+            )}
+        </>
+    )   
 }

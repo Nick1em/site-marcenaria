@@ -3,10 +3,15 @@
 
 import { useState } from 'react';
 import styles from '../../style/orcamento.module.css';
+
+//importando inputs do usuário
 import InputsUsuarioEstrutura from './inputsUsuario';
 
 //Importandono o hook de dimensões
 import { useDimensoesEstrutura } from '../hooks/useDimensoesEstrutura';
+
+//Importando os componentes de inputs e opções de estrutura, para não precisar ficar repetindo em cada móvel
+import OpcoesEstrutura from './opcoesEstrutura';
 
 export default function Comoda() {
 
@@ -21,6 +26,12 @@ export default function Comoda() {
             setResultado,
             dimensoesCompletas,
         } = useDimensoesEstrutura();
+
+        const [temGaveta, setTemGaveta] = useState('');
+        const [temPorta,setTemPorta] = useState('')
+
+        const [temDivisoria, setTemDivisoria] = useState('');
+        
     
 
     const dimensoesUsuario = altura && largura && profundidade;
@@ -58,8 +69,8 @@ export default function Comoda() {
 
     };
 
-    return (
-            //Estrutura
+   return (
+    <>
             <InputsUsuarioEstrutura
                 altura={altura}
                 largura={largura}
@@ -68,6 +79,27 @@ export default function Comoda() {
                 setLargura={setLargura}
                 setProfundidade={setProfundidade}
             />
-            //gavetas
-        )
+
+            {dimensoesCompletas && (
+                <>
+                    <OpcoesEstrutura
+                        mostrarDivisorias
+                        mostrarGavetas
+                        temDivisoria={temDivisoria}
+                        setTemDivisoria={setTemDivisoria}
+                        temGaveta={temGaveta}
+                        setTemGaveta={setTemGaveta}
+                    />
+
+                    <button className={styles.botao} onClick={calcular}>
+                        Calcular
+                    </button>
+
+                    <label className={styles.valorOrcamento}>
+                        Seu orçamento é: R$ {resultado.toFixed(2)}
+                    </label>
+                </>
+            )}
+        </>
+    );
 }

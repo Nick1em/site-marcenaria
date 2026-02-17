@@ -2,14 +2,19 @@
 
 import { useState } from 'react';
 import styles from '../../style/orcamento.module.css';
+
+//Importando inputs do usuário      
 import InputsUsuarioEstrutura from './inputsUsuario';
 
 //importando hooks
 import { useDimensoesEstrutura } from '../hooks/useDimensoesEstrutura';
 
+//Importando os componentes de inputs e opções de estrutura, para não precisar ficar repetindo em cada móvel
+import OpcoesEstrutura from './opcoesEstrutura';
+
 export default function CozinhaAlto() {
 
-   const {
+    const {
         largura,
         setLargura,
         altura,
@@ -20,6 +25,11 @@ export default function CozinhaAlto() {
         setResultado,
         dimensoesCompletas,
     } = useDimensoesEstrutura();
+
+    const [temGaveta, setTemGaveta] = useState('');
+    const [temPorta,setTemPorta] = useState('')
+
+    const [temDivisoria, setTemDivisoria] = useState('');
 
     const dimensoesUsuario = altura && largura && profundidade;
 
@@ -57,13 +67,34 @@ export default function CozinhaAlto() {
     };
 
     return (
-        <InputsUsuarioEstrutura
-            altura={altura}
-            largura={largura}
-            profundidade={profundidade}
-            setAltura={setAltura}
-            setLargura={setLargura}
-            setProfundidade={setProfundidade}
-        />
+        <>
+            <InputsUsuarioEstrutura
+                altura={altura}
+                largura={largura}
+                profundidade={profundidade}
+                setAltura={setAltura}
+                setLargura={setLargura}
+                setProfundidade={setProfundidade}
+            />
+
+            {dimensoesCompletas && (
+                <>
+                    <OpcoesEstrutura
+                        mostrarDivisorias
+                        mostrarGavetas
+                        temDivisoria={temDivisoria}
+                        setTemDivisoria={setTemDivisoria}
+                        temGaveta={temGaveta}
+                        setTemGaveta={setTemGaveta}
+                    />
+
+                    <button className={styles.botao} onClick={calcular}> Calcular</button>
+
+                    <label className={styles.valorOrcamento}>Seu orçamento é de R $ {resultado} </label>
+
+                </>
+            )}
+        </>
     )
 }
+    

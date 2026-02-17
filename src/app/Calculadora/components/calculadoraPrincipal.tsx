@@ -15,9 +15,13 @@ import CozinhaBaixo from './cozinhaBaixo';
 import Penteadeira from './penteadeira';
 import Rack from './rack';
 
+
+
 export default function CalculadoraPrincipal() {
 
     const [movel,setMovel] = useState('');
+
+    
 
     return (
         <div className={styles.corpo}>

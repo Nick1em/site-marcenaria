@@ -1,57 +1,58 @@
 .principal {
-   background: linear-gradient(
-    black,
-    #201f1a,
-    #141310,
-    black
-   );
+  background: linear-gradient(black,
+      #201f1a,
+      #141310,
+      black);
   min-height: 100vh;
 }
+
 .titulo {
-    font-size: 25;
-    font-family: 'Cinzel', serif;
-    color:#854836;
+  font-size: 25;
+  font-family: 'Cinzel', serif;
+  color: #854836;
 }
 
-.paragrafo{
-    font-size: 18;
-    font-family: 'Cinzel', serif;
-    color: #d4cece;
+.paragrafo {
+  font-size: 18;
+  font-family: 'Cinzel', serif;
+  color: #d4cece;
 }
 
 .secao {
-    padding-top: 10rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:2rem;
-    
-   
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+
+
 }
+
 .secao2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 2rem; /* espaço entre imagem e texto */
+  gap: 2rem;
+  /* espaço entre imagem e texto */
   padding-top: 10rem;
-  
+
 }
 
-.fotosHome{
-    width: 70rem;
-    height: 20rem;
-    border-radius: 10px;
+.fotosHome {
+  width: 70rem;
+  height: 20rem;
+  border-radius: 10px;
 }
 
-.imgGrupo{
-    width: 40rem;
-    height: 10rem;
-    border-radius: 10px;
-    background-size: cover;
+.imgGrupo {
+  width: 40rem;
+  height: 10rem;
+  border-radius: 10px;
+  background-size: cover;
 }
 
-.videoHome{
-    object-fit: cover;
+.videoHome {
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -70,10 +71,10 @@
     gap: 1.5rem;
   }
 
-  .fotosHome{
+  .fotosHome {
     width: 100%;
     border-radius: 10px;
-}
+  }
 
   .imgGrupo {
     width: 100%;
@@ -81,4 +82,3 @@
     background-size: cover;
   }
 }
-

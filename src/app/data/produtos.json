@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "nome": "Mesa Símbolo Batman",
+        "nome": "Mesa Batman",
         "tempoEntrega": "[  15 DIAS APÓS O PEDIDO! ]",
         "descrição": "Mesa feita em MDF, inspirada no universo DC do Batman",
         "universo":"DC",
@@ -19,7 +19,7 @@
     },
     {
         "id": "3",
-        "nome": "Mesa Millenium Falcon",
+        "nome": "Millenium Falcon",
         "tempoEntrega": "[  15 DIAS APÓS O PEDIDO! ]",
         "descrição": "Feita em MDF, ispirada no univer de Star Wars",
         "universo":"Disney",
@@ -28,7 +28,7 @@
     },
     {
         "id": "4",
-        "nome": "Mesa:Mapa/Terra Média",
+        "nome": "Mapa Terra Média",
         "tempoEntrega": "[  25 DIAS APÓS O PEDIDO! ]",
         "descrição": "Feita em MDF, mapa desenhado a mão, inspirada no universo Senhor dos Anéis",
         "universo":"TOLKIEN",

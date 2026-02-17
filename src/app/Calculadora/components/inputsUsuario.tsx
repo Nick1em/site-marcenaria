@@ -13,6 +13,7 @@ type Props = {
 };
 
 export default function InputsUsuario({
+  
   altura,
   largura,
   profundidade,

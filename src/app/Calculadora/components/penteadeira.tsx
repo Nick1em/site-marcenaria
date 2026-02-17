@@ -2,10 +2,15 @@
 
 import { useState } from 'react';
 import styles from '../../style/orcamento.module.css';
+
+//importando inputs do usuário
 import InputsUsuarioEstrutura from './inputsUsuario';
 
 //importando o hook para usar as dimensões do usuário
 import { useDimensoesEstrutura } from "../hooks/useDimensoesEstrutura";
+
+//importando os componentes de inputs e opções de estrutura, para não precisar ficar repetindo em cada móvel
+import OpcoesEstrutura from './opcoesEstrutura';
 
 export default function Penteadeira() {
 
@@ -20,6 +25,11 @@ export default function Penteadeira() {
             setResultado,
             dimensoesCompletas,
         } = useDimensoesEstrutura();
+
+        const [temGaveta, setTemGaveta] = useState('');
+        const [temPorta, setTemPorta] = useState('');
+
+        const [temDivisoria, setTemDivisoria] = useState('');
 
     const dimensoesUsuario = altura && largura && profundidade;
 
@@ -53,6 +63,7 @@ export default function Penteadeira() {
     }
 
      return (
+        <>
             <InputsUsuarioEstrutura
                 altura={altura}
                 largura={largura}
@@ -61,6 +72,24 @@ export default function Penteadeira() {
                 setLargura={setLargura}
                 setProfundidade={setProfundidade}
             />
-        )
 
+            {dimensoesCompletas && (
+                <>
+                    <OpcoesEstrutura
+                        mostrarDivisorias
+                        mostrarGavetas
+                        temDivisoria={temDivisoria}
+                        setTemDivisoria={setTemDivisoria}
+                        temGaveta={temGaveta}
+                        setTemGaveta={setTemGaveta}
+                    />
+
+                    <button className={styles.botao} onClick={calcular}> Calcular</button>
+
+                    <label className={styles.valorOrcamento}>Seu orçamento é de R $ {resultado} </label>
+
+                </>
+            )}
+        </>
+    )
 }

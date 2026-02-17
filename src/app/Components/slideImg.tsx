@@ -24,6 +24,7 @@ function SliderImg () {
 
     return (
         <div>
+            
             <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             slidesPerView={1}
@@ -39,7 +40,7 @@ function SliderImg () {
                     <img
                     src={fotos.img}
                     alt='Fotos dos móveis temáticos feitos pela Móveis Gondor!'
-                    className="w-max h-max bg-cover bg-center"
+                    className="w-screen h-max bg-cover bg-center" //cortar as fotos para elas ficarem menores
                     />
                 </SwiperSlide>
                ))}

@@ -2,17 +2,38 @@
 
 import { useState } from 'react';
 import styles from '../../style/orcamento.module.css';
+
+
+//Importando inputs do usuário
 import InputsUsuarioEstrutura from './inputsUsuario';
 
+//importando hooks
+import { useDimensoesEstrutura } from "../hooks/useDimensoesEstrutura";
+
+//Importando os componentes de inputs e opções de estrutura, para não precisar ficar repetindo em cada móvel
+import OpcoesEstrutura from './opcoesEstrutura';
 
 
 export default function ArmarioBanheiro() {
 
-    const [largura, setLargura] = useState('');
-    const [altura, setAltura] = useState('');
-    const [profundidade, setProfundidade] = useState('');
+    const {
 
-    const [resultado, setResultado] = useState(0);
+        largura,
+        setLargura,
+        altura,
+        setAltura,
+        profundidade,
+        setProfundidade,
+        resultado,
+        setResultado,
+        dimensoesCompletas,
+    } = useDimensoesEstrutura();
+
+
+    // ESTADOS DAS OPÇÕES DIV,GAVETA,PORTAS
+    const [temDivisoria, setTemDivisoria] = useState('');
+    const [temGaveta, setTemGaveta] = useState('');
+
 
     const dimensoesUsuario = altura && largura && profundidade;
 
@@ -50,6 +71,7 @@ export default function ArmarioBanheiro() {
     };
 
     return (
+    <>
             <InputsUsuarioEstrutura
                 altura={altura}
                 largura={largura}
@@ -58,6 +80,28 @@ export default function ArmarioBanheiro() {
                 setLargura={setLargura}
                 setProfundidade={setProfundidade}
             />
-        )
+
+            {dimensoesCompletas && (
+                <>
+                    <OpcoesEstrutura
+                        mostrarDivisorias
+                        mostrarGavetas
+                        temDivisoria={temDivisoria}
+                        setTemDivisoria={setTemDivisoria}
+                        temGaveta={temGaveta}
+                        setTemGaveta={setTemGaveta}
+                    />
+
+                    <button className={styles.botao} onClick={calcular}>
+                        Calcular
+                    </button>
+
+                    <label className={styles.valorOrcamento}>
+                        Seu orçamento é: R$ {resultado.toFixed(2)}
+                    </label>
+                </>
+            )}
+        </>
+    );
 
 }

@@ -3,14 +3,19 @@
 
 import { useState } from 'react';
 import styles from '../../style/orcamento.module.css';
+
+//Importando inputs do usuário
 import InputsUsuarioEstrutura from './inputsUsuario';
 
 //importando hooks
 import { useDimensoesEstrutura } from "../hooks/useDimensoesEstrutura";
 
+//Importando os componentes de inputs e opções de estrutura, para não precisar ficar repetindo em cada móvel
+import OpcoesEstrutura from './opcoesEstrutura';
 
 
 export default function GuardaRoupa() {
+
     const {
         largura,
         setLargura,
@@ -23,13 +28,20 @@ export default function GuardaRoupa() {
         dimensoesCompletas,
     } = useDimensoesEstrutura();
 
+    // ESTADOS DAS OPÇÕES DIV,GAVETA,PORTAS
+    const [temDivisoria, setTemDivisoria] = useState('');
+    const [temGaveta, setTemGaveta] = useState('');
+
 
     const dimensoesUsuario = altura && largura && profundidade;
+
 
     const calcular = () => {
         const alt = Number(altura);
         const larg = Number(largura);
         const prof = Number(profundidade);
+
+        
 
         if (!alt || !larg || !prof) {
             alert('Preencha todas as dimensões!!!');
@@ -56,16 +68,43 @@ export default function GuardaRoupa() {
         setResultado(total);
     };
 
+    
+
     return (
-        <InputsUsuarioEstrutura
-            altura={altura}
-            largura={largura}
-            profundidade={profundidade}
-            setAltura={setAltura}
-            setLargura={setLargura}
-            setProfundidade={setProfundidade}
-        />
-    )
+    <>
+            <InputsUsuarioEstrutura
+                altura={altura}
+                largura={largura}
+                profundidade={profundidade}
+                setAltura={setAltura}
+                setLargura={setLargura}
+                setProfundidade={setProfundidade}
+            />
+
+            {dimensoesCompletas && (
+                <>
+                    <OpcoesEstrutura
+                        mostrarDivisorias
+                        mostrarGavetas
+                        temDivisoria={temDivisoria}
+                        setTemDivisoria={setTemDivisoria}
+                        temGaveta={temGaveta}
+                        setTemGaveta={setTemGaveta}
+                    />
+
+                    <button className={styles.botao} onClick={calcular}>
+                        Calcular
+                    </button>
+
+                    <label className={styles.valorOrcamento}>
+                        Seu orçamento é: R$ {resultado.toFixed(2)}
+                    </label>
+                </>
+            )}
+        </>
+    );
+
+
 }
 
 
