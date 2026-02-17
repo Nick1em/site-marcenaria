@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Móveis Gondor — Site Institucional
 
-## Getting Started
+Este projeto é um **site institucional desenvolvido como projeto pessoal**, criado para representar a marcenaria **Móveis Gondor**, especializada na produção de móveis sob medida e móveis temáticos.
 
-First, run the development server:
+O objetivo do projeto é apresentar a marca, destacar os serviços oferecidos e servir como base para evolução contínua do site, incluindo novas funcionalidades no futuro.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
+https://site-marcenaria-git-styleprodutos-nicole-kanandas-projects.vercel.app/
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  Tecnologias utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js
+- React
+- TypeScript
+- HTML5
+- CSS3
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+##  Objetivos do projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Criar uma presença online profissional para a marcenaria
+- Criar uma calculadora inteligente, onde o usuário podera fazer seu prórpio orçamento
+- Praticar e consolidar conhecimentos em desenvolvimento web  
+- Desenvolver um projeto real para portfólio  
+- Servir como base para futuras melhorias e funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Status do projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Em desenvolvimento contínuo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+##  É IMPORTANTE RESSALTAR !!!
+
+Este é um **projeto pessoal**, desenvolvido para fins de aprendizado e portfólio, podendo receber atualizações frequentes conforme a evolução técnica da desenvolvedora.
+
+---
+
+Desenvolvido por **Ni**
