@@ -7,6 +7,7 @@ import SliderImg from "./Components/slideImg";
 
 export default function Home() {
   return (
+    
     //Carrosel de imagens
     <div className={styles.principal}>
 
