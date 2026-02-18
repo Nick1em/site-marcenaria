@@ -7,7 +7,7 @@ O objetivo do projeto é apresentar a marca, destacar os serviços oferecidos e 
 ---
 
 ## Deploy
-https://site-marcenaria-git-styleprodutos-nicole-kanandas-projects.vercel.app/
+https://site-marcenaria-umber.vercel.app
 ---
 
 ##  Tecnologias utilizadas
